@@ -11,6 +11,12 @@ router.get('/notes', function (req, res) {
 });
 
 // router post request
+router.post('/notes', (req, res) => {
+    saveData
+        .addNote(req.body)
+        .then((note) => res.json(note))
+        .catch(err => res.status(500).json(err));
+});
 
 // router delete request
 
