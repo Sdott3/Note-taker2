@@ -19,6 +19,7 @@ router.post('/notes', (req, res) => {
 });
 
 // router delete request
+// Learned this from module 12
 router.delete('/:id', (req, res) => {
     saveData
         .deleteNote(req.body)
