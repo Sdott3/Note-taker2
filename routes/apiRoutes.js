@@ -16,7 +16,7 @@ router.post('/notes', (req, res) => {
         .addNote(req.body)
         .then((note) => res.json(note))
         .catch(err => res.status(500).json(err));
-})
+});
 
 // router delete request
 router.delete('/:id', (req, res) => {
@@ -24,6 +24,6 @@ router.delete('/:id', (req, res) => {
         .deleteNote(req.body)
         .the((note) => res.json(note))
         .catch(err => res.status(500).json(err));
-})
+});
 
 module.exports = router;
